@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatBox</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <h2 class="title">Hey Messager</h2>
+    <div class="main">
+        <div class="yourname">
+            <span><i class="fab fa-twitter"></i></span>
+            <input type="text" id="name-input" class="yourname-input" value="anonymous" maxlength="18" />
+        </div>
+        <div class="message-container" id="message-container">
+            <div class="message-feedback">
+                <p class="feedback" id="feedback">  A Message is being composed</p>
+            </div>
+        </div>
+        <form class="message-form" id="message-form">
+            <input type="text" id="message-input" class="message-input" autocomplete="off">
+            <div class="v-divider"></div>
+            <button type="submit" class="submit send-button" id="send-button">
+                <span><i class="fas fa-arrow-right"></i></span>
+            </button>
+        </form>
+        <h3 id="no-of-clients">No. of Clients: 0</h3>
+    </div>
+
+    <script src="/socket.io/socket.io.js"></script> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.30.1/moment.min.js"></script> 
+    <script src="main.js"></script>
+</body>
+</html>
